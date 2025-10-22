@@ -1,0 +1,38 @@
+[
+    {
+        "input": "42",
+        "expected_output": "42"
+    },
+    {
+        "input": "x",
+        "expected_output": "x"
+    },
+    {
+        "input": "(+ 2 3)",
+        "expected_output": "['PLUS', '2', '3']"
+    },
+    {
+        "input": "(× x 5)",
+        "expected_output": "['MULT', 'x', '5']"
+    },
+    {
+        "input": "(+ (× 2 3) 4)",
+        "expected_output": "['PLUS', ['MULT', '2', '3'], '4']"
+    },
+    {
+        "input": "(? (= x 0) 1 0)",
+        "expected_output": "['CONDITIONAL', ['EQUALS', 'x', '0'], '1', '0']"
+    },
+    {
+        "input": "(≜ y 10 y)",
+        "expected_output": "['LET', 'y', '10', 'y']"
+    },
+    {
+        "input": "(λ x x)",
+        "expected_output": "['LAMBDA', 'x', 'x']"
+    },
+    {
+        "input": "((λ x (+ x 1)) 5)",
+        "expected_output": "[['LAMBDA', 'x', ['PLUS', 'x', '1']], '5']"
+    }
+]
